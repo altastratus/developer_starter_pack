@@ -1,9 +1,10 @@
 
-Welcome to the developer_starter_pack wiki!
+## Clade Ventures Developer Starter Pack
 
-Here's some things that you need to know to code, according to our previous discussion on having a qualified code. Please read carefully and implement it in your code as well. 
-If you have something to add according writing a qualified code or other developer starter pack, please kindly raise a discussion and update the wiki! Or, if you have question, please kindly ask the team. Have a fun day coding!
+We list some of the things that you, as a developer, need to know to write efficient, readable and maintainable code.
+Take your time as much as possible to read this document. This document will be your guide book throughout your developer life at Clade Ventures. 
 
+This document is a living document which means that anyone may contribute to update this document.
 
 ***
 
