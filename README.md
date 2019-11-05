@@ -78,20 +78,37 @@ Instead of use:
 
 ## Parameter
 
-1. The parameter is something that you pass and you receive between function or class. In some languages, parameters in function can be required or optional. If you have 5 or more required parameters, maybe that time for you to use a new model class as a parameter instead of using so many parameters.
-1. Don’t use the optional parameters as a required parameters. For example in dart:
+Parameter is something that you pass and you receive between function or class. In some languages, parameters in function can be required or optional. 
 
-`functionName({@Required DataType variable}){}` Because this will only give a warning to the developer, not an error. do: `functionName(DataType variable){}`
+1. If you have 5 or more required parameters, maybe that time for you to use a new model class as a parameter instead of using so many parameters.
+
+2. Don’t use the optional parameters as a required parameters. For example in dart:
+
+	`functionName({@Required DataType variable}){}`
+
+   That code will only give a warning to the developer, not an error. Do:
+
+	`functionName(DataType variable){}`
 
 
-3. Don’t pass a new class as parameter if you can create that class on targeted call function / class, to simplify your function / constructor class. So, you can easily call that function / constructor class everywhere. For example, don’t do this: `functionName(new ClassName());`
+3. Don’t pass a new class as parameter if you can create that class on targeted call function / class, to simplify your function / constructor class. So, you can easily call that function / constructor class everywhere.
+   For example, **don’t do** this: 
 
-Move create new `ClassName` inside of `functionName`. So you will call that function easier like this `functionName();` then call using on example above.
+	`functionName(new ClassName());`
 
-Or `new ClassName(new HelperClass(), new UtilClass());`
+   Move create `new ClassName` inside of `functionName`. So you will call that function easier like below: 
 
-If you move new `HelperClass()` and new _UtilClass()_ to the inside of ClassName, same as above, so you will create that ClassName easier like this new _ClassName();_
+	`functionName();`
 
+   Another example, if we have a code like this:
+
+	`new ClassName(new HelperClass(), new UtilClass());`
+
+   If you move `new HelperClass()` and `new UtilClass()` to the inside of `ClassName`, same as above, so you will create that ClassName easier like below:
+
+	`new ClassName();`
+
+   This way will decrease much redundant codes (boilerplates) and esier to call many times anywhere in our project.
 
 ##  Private & public Variable
 
