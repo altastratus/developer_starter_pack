@@ -20,7 +20,7 @@ This document is a living document which means that anyone may contribute to upd
 * ELSE conditions is not needed when IF conditions are not required and values in IF conditions have not different values.
 * Avoid if - else condition Deep Nesting. Too many levels of nesting can make code harder to read and follow.
 
-### If - Else If conditions
+### If - Else If Conditions
 
 * If you want to check conditions with IF conditions, you can use ELSE IF conditions when you must check any condition in one condition.
 * If you want to check conditions with IF conditions, you can use IF conditions when you must check any condition with one step.
@@ -48,7 +48,6 @@ Syntax example :
 
 
 ## Null-Aware 
-(if your language code support null-aware operator)
 
 * If you don’t initiate when declaring a variable, on construction function, or on init function of class, please aware with the null value that will happen. If your language code support null aware operator “?.”, please always use this. If not, please use if(variable != null) to avoid Null pointer exception / related error. 
 * Better you use null-aware `??` or `?:` instead of using “if (variable != null) else”
@@ -72,17 +71,17 @@ Instead of use:
       string pageTitle = "Default Title";
     }
 
-## Try-catch condition
-1. You MUST use Try-Catch when you call a risky function such as parse variable data type, or other strange libraries.
+## Try-Catch Conditions
+1. You MUST use Try-Catch when you call a risky function such as parsing variable data type, or other strange libraries.
 1. If in your try have an action (ex: change state), don’t forget to add handler on Catch. If not, your code may be stuck in one state.
 
 ## Parameter
 
-Parameter is something that you pass and you receive between function or class. In some languages, parameters in function can be required or optional. 
+Parameter is something that you pass and receive between functions or classes. In some languages, parameters in function can be required or optional. 
 
-1. If you have 5 or more required parameters, maybe that time for you to use a new model class as a parameter instead of using so many parameters.
+1. If you have 5 or more required parameters, Use a new model class as a parameter instead of using too many parameters.
 
-2. Don’t use the optional parameters as a required parameters. For example in dart:
+2. Don’t use optional parameters as a required parameters. For example in Dart:
 
 	`functionName({@Required DataType variable}){}`
 
@@ -110,10 +109,9 @@ Parameter is something that you pass and you receive between function or class. 
 
    This way will decrease much redundant codes (boilerplates) and esier to call many times anywhere in our project.
 
-##  Private & public Variable
+##  Private & Public Variable
 
-1. Use private variable if it is only used locally in a particular class. 
-Do the same for function or method, for example in Dart : 
+1. Use private variable if it is only used locally in a particular class or function, for example: 
 
     String _customerName   ---> variable
     String _getCustomerName(){  ---> function
@@ -128,7 +126,7 @@ Do the same for function or method, for example in Dart :
     }
 
 ## Length
- please avoid a function more than 80 lines.
+Do not write a function with more than 80 lines.
 
 ## The Use of Helper
 Put all reusable functions or methods on a helper to avoid redundant functions in one app. For example, functions to handle String capitalization,  handle Date Formatting,  handle converting date from unix time epoch, and so on. We can implement a Helper Class by creating a class that have function which would do the job we want.
@@ -163,7 +161,7 @@ Instead of this.
        Payment(this.payment);
        bool get isDirectPayment {
 	      return paymentModel.paymentType.toLowerCase() == “direct”;
-       }
+	}
     }
 
 ## Indentation
@@ -203,7 +201,7 @@ Don't:
 ## Folder Structure
 Every programming language has different style for structuring the folder, so at the moment, I just give a specific example in dart. https://pub.dev/packages/flutter_clean_architecture
 
-## Deliver a Good Things for the Next Devs
+## Deliver Good Things for the Next Devs
 Always code as if the person who ends up maintaining your code will not blame you :)
 
 
