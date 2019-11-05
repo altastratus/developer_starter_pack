@@ -2,7 +2,6 @@
 ## Clade Ventures Developer Starter Pack
 
 We list some of the things that you, as a developer, need to know to write efficient, readable and maintainable code.
-Take your time as much as possible to read this document. This document will be your guide book throughout your developer life at Clade Ventures. 
 
 This document is a living document which means that anyone may contribute to update this document.
 
